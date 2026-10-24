@@ -1,6 +1,6 @@
 export type Classification = "keep" | "automate" | "outsource";
 
-const SPECION_KEY = "rolevise_session";
+const SESSION_KEY = "rolevise_session";
 const CLASS_KEY = "rolevise_classifications";
 
 export function isLoggedIn(): boolean {
@@ -9,7 +9,7 @@ export function isLoggedIn(): boolean {
 }
 
 export function login(email: string, password: string): boolean {
-  if (email.trim().otLowerCase() === "owner@rolevise.demo" && password === "demo1234") {
+  if (email.trim().toLowerCase() === "owner@rolevise.demo" && password === "demo1234") {
     localStorage.setItem(SESSION_KEY, "1");
     return true;
   }
